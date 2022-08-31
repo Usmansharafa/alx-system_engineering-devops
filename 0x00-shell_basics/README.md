@@ -13,3 +13,5 @@ This script displays the current directory contents in a long format including h
 This script displays directory contents in a long format with user and group IDs displayed numerically and hidden files
 ## 6-firstdirectory
 This script creates a directory named 'my_first_directory' in the '/tmp/' directory
+## 7-movethatfile
+This script moves the file 'betty' in '/tmp/' directory to '/tmp/my_first_directory'
