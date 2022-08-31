@@ -25,3 +25,5 @@ This script changes the working directory to the previous one
 This script lists all files including the hidden ones in the current working directory, parent working directory and '/boot' directory
 ## 12-file_type
 This script prints the type of the file named 'iamafile' in '/tmp' directory
+## 13-symbolic link
+This script creates a symbolic link to '/bin/ls' named '__ls__'
