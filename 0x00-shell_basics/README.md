@@ -21,3 +21,5 @@ This script deletes the file 'betty' in '/tmp/my_first_directory'
 This script deletes the directory 'my_first_directory' that is in the '/tmp' directory
 ## 10-back
 This script changes the working directory to the previous one
+## 11-lists
+This script lists all files including the hidden ones in the current working directory, parent working directory and '/boot' directory
