@@ -1,7 +1,9 @@
 # 0x00-shell_basics
-## Task 0
+## 0-current_working_directory
 This script prints out the absolute path of the current working directory
-## Task 1
+## 1-listit
 This script prints out the contents of the current working directory
-## Task 2
+## 2-bring_me_home
 This script changes the current working directory to the user's home direcory
+## 3-listfiles
+This script displays the current directory contents in a long format
