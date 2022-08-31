@@ -23,3 +23,5 @@ This script deletes the directory 'my_first_directory' that is in the '/tmp' dir
 This script changes the working directory to the previous one
 ## 11-lists
 This script lists all files including the hidden ones in the current working directory, parent working directory and '/boot' directory
+## 12-file_type
+This script prints the type of the file named 'iamafile' in '/tmp' directory
