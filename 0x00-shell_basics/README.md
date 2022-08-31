@@ -33,3 +33,5 @@ This script copies all the HTML files in the current working directory to the pa
 This script moves all files beginning with an uppercase letter to the directory '/tmp/u'
 ## 101-clean_emacs
 This script deletes all files in the current working directory that ends with '~'
+## 102-tree
+This script creates the directories 'welcome/', 'welcome/to' and 'welcome/to/school'
