@@ -37,3 +37,5 @@ This script deletes all files in the current working directory that ends with '~
 This script creates the directories 'welcome/', 'welcome/to' and 'welcome/to/school'
 ## 103-commas
 This script lists out the contents of the current directory including hidden files, separated by commas and directories ending with '/'
+## school.mgc
+It is a magic file that can be used with the command 'file' to detect 'School' data files
