@@ -18,4 +18,6 @@ This script adds execution permission to the owner, group owner and the other us
 ## 8-James_Bond
 This script sets owner and group permission to no permission at all and gives other users all the permissions
 ## 9-John_Doe
-This script sets the mode of the file 'hello' to '-rwxr-x-wx' 
+This script sets the mode of the file 'hello' to '-rwxr-x-wx'
+## 10-mirror_permissions
+This is a script that sets the mode of the file 'hello' the same as 'olleh''s mode 
