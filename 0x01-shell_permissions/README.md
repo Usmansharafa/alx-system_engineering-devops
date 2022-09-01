@@ -20,4 +20,6 @@ This script sets owner and group permission to no permission at all and gives ot
 ## 9-John_Doe
 This script sets the mode of the file 'hello' to '-rwxr-x-wx'
 ## 10-mirror_permissions
-This is a script that sets the mode of the file 'hello' the same as 'olleh''s mode 
+This is a script that sets the mode of the file 'hello' the same as 'olleh''s mode
+## 11-directories_permissions
+This script adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users 
