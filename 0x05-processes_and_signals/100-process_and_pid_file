@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script creates a file, displays a text indefintely and responds based
+# on some signals received
+
+sudo touch /var/run/myscript.pid
+sudo bash -c 'echo $$ > /var/run/myscript.pid'
+while true
+do
+  echo "To infinity and beyond"
+  sleep 2
+  trap 'echo "I hate the kill command"; sudo rm /var/run/myscript.pid; exit' SIGTERM
+  trap 'echo "Y U no love me?!"' SIGINT
+  trap 'sudo rm /var/run/myscript.pid; exit' SIGQUIT
+done
