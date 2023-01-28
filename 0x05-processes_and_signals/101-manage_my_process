@@ -15,7 +15,7 @@
 #     4. Creates a file containing its PID in /var/run/my_process.pid
 #     5. Displays "manage_my_process restarted"
 #   If any other or no arguments are passed, displays
-#+  "Usage: manage_my_process {start|stop|restart}"
+#   "Usage: manage_my_process {start|stop|restart}"
 
 if [ "$1" == "start" ]
 then
