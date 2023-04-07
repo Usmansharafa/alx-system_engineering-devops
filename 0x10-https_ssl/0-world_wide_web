@@ -10,17 +10,10 @@ function get_record_info() {
 
   
   record=$(dig +short "$subdomain.$domain")
-  record_type=$(echo "$record" | awk '{print $2}')
+  record_type=$(dig "$subdomain.$domain" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $4}')
   destination=$(echo "$record" | awk '{print $1}')
   echo "The subdomain $subdomain is a $record_type record and points to $destination"
 }
-
-# Check if domain argument is provided
-if [ -z "$1" ]
-then
-  echo "Please provide the domain name as the first argument."
-  exit 1
-fi
 
 domain=$1
 
