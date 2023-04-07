@@ -1,5 +1,5 @@
-#!usr/bin/env bash
-# This script displays information about subdomains
+#!/usr/bin/env bash
+#This script displays information about subdomains
 
 function get_record_info() {
   local domain=$1
