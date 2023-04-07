@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!usr/bin/env bash
 # This script displays information about subdomains
 
 function get_record_info() {
