@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# This script displays information about subdomains
+
+function get_record_info() {
+  local domain=$1
+  local subdomain=$2
+  local record
+  local record_type
+  local destination
+
+  
+  record=$(dig +short "$subdomain.$domain")
+  record_type=$(echo "$record" | awk '{print $2}')
+  destination=$(echo "$record" | awk '{print $1}')
+  echo "The subdomain $subdomain is a $record_type record and points to $destination"
+}
+
+# Check if domain argument is provided
+if [ -z "$1" ]
+then
+  echo "Please provide the domain name as the first argument."
+  exit 1
+fi
+
+domain=$1
+
+# Check if subdomain argument is provided
+if [ -n "$2" ]
+then
+  subdomain=$2
+  get_record_info "$domain" "$subdomain"
+else
+  get_record_info "$domain" www
+  get_record_info "$domain" lb-01
+  get_record_info "$domain" web-01
+  get_record_info "$domain" web-02
+fi
+
