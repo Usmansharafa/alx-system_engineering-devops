@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script configures a web server to return a custom header response
 TEXT="Hello World!"
-REDIRECTRULE="\n\tlocation /redirect_me {\n\t\treturn 301 https://youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n"
+REDIRECTRULE="\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n"
 FILE="/etc/nginx/sites-available/default"
 ERRORFILE="/usr/share/nginx/html/404error.html"
 ERRORTEXT="Ceci n'est pas une page\n"
@@ -13,6 +13,6 @@ apt-get -y install nginx
 sudo echo "$TEXT" > /var/www/html/index.nginx-debian.html
 sed -i "40i\ $REDIRECTRULE" "$FILE"
 echo "$ERRORTEXT" > "$ERRORFILE"
-sed -i "40i\ $ERRORREDIRECT" "$FILE"
-sed -i "40i\ $HEADER" "$FILE"
+sed -i "44i\ $ERRORREDIRECT" "$FILE"
+sed -i "50i\ $HEADER" "$FILE"
 service nginx restart
