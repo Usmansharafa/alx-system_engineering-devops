@@ -15,7 +15,6 @@ if __name__ == "__main__":
     api_url = "https://jsonplaceholder.typicode.com"
     url = f"{api_url}/users/{u_id}"
     users = requests.get(url).json()
-    user = users["name"]
     tasks = requests.get(f"{api_url}/todos").json()
     tasks_for_id = []
 
