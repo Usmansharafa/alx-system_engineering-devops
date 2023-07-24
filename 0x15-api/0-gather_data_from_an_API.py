@@ -30,6 +30,6 @@ if __name__ == "__main__":
 
     total_tasks = len(tasks_for_id)
     completed = len(completed_tasks)
-    print(f"Employee {user} is done with tasks({completed}/{total_tasks})")
+    print(f"Employee {user} is done with tasks({completed}/{total_tasks}):")
     for key in completed_tasks:
         print(f"\t {key['title']}")
