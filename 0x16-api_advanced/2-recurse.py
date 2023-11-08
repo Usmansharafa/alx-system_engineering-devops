@@ -3,7 +3,7 @@
 of hot posts in a subreddit"""
 
 
-def recurse(subreddit, hot_list=[], after=None, count=0):
+def recurse(subreddit, hot_list=[], after=None):
     """This function returns the list of hot posts in a subreddit using
     recursive calls"""
 
@@ -13,10 +13,10 @@ def recurse(subreddit, hot_list=[], after=None, count=0):
     endpoint = f'r/{subreddit}/hot.json'
 
     response = requests.get(f'{base_url}/{endpoint}', headers=headers,
-                            params={'after': after, 'count': count},
+                            params={'after': after},
                             allow_redirects=False)
 
-    if response.status_code >= 300:
+    if response.status_code >= 400:
         return (None)
 
     info = response.json()
@@ -24,5 +24,4 @@ def recurse(subreddit, hot_list=[], after=None, count=0):
                           for child in info.get('data').get('children')]
     if not info.get('data').get('after'):
         return hotlist
-    return (recurse(subreddit, hotlist, info.get('data').get('after'),
-            info.get('data').get('count')))
+    return (recurse(subreddit, hotlist, info.get('data').get('after')))
