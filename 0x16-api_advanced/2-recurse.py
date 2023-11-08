@@ -17,7 +17,7 @@ def recurse(subreddit, hot_list=[], after=None, count=0):
                             allow_redirects=False)
 
     if response.status_code >= 400:
-        print("None")
+        return (None)
 
     info = response.json()
     hotlist = hot_list + [child.get('data').get('title')
